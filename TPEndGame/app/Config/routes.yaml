@@ -1,0 +1,4 @@
+formulaire-contact:
+    uri: /
+    controller: Controller\FormulaireContactController
+    httpMethod: [GET,POST]
