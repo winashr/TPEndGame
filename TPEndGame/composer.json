@@ -10,7 +10,8 @@
     "studoo/edu-framework": "2.x-dev"
   },
   "require-dev": {
-    "phpunit/phpunit": "^9.5"
+    "phpunit/phpunit": "^9.5",
+    "deployer/deployer": "7.x-dev"
   },
   "autoload": {
     "psr-4": {
