@@ -4,6 +4,8 @@ namespace Repository;
 
 use Entity\formulaireEntity;
 use Studoo\EduFramework\Core\Service\DatabaseService;
+use Studoo\EduFramework\Core\Controller\Request;
+
 
 class formulaireRepository
 {
@@ -19,4 +21,16 @@ class formulaireRepository
             $formulaire->getMessage()
         ]);
     }
+    public function inserFormulaire(Request $request): void
+    {
+        $formulaire = new \Entity\formulaireEntity(
+            $request->get('nom'),
+            $request->get('email'),
+            $request->get('sujet'),
+            $request->get('message')
+        );
+
+        $this->save($formulaire);
+    }
+
 }
